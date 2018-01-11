@@ -1,0 +1,434 @@
+@import "vars"
+
+
+@media only screen and (max-width : 1330px)
+	//animation
+	@keyframes fly
+		from
+			transform: scale(1)
+			right: -105px
+			bottom: -150px
+		50%
+			transform: scale(1.2)
+			right: -125px
+			bottom: 0px
+		to
+			transform: scale(1)
+			right: -105px
+			bottom: -150px
+
+	/**/
+
+
+
+@media only screen and (max-width : 1200px)
+
+	/*HEADER BEGIN*/
+	header
+		&:before
+			background-position: 50% 0
+		&:after
+			background-position: 46% 160%
+	h1
+		font-size: 58px
+	/*HEADER END*/
+	
+
+	.privacy
+		background-position: 60% 81%, 122% 44%, 110% 72%
+
+
+	/* PRICING BEGIN */
+	.table-pricing
+		width: 350px
+	.table-pricing:hover .table-center
+		position: absolute
+		left: calc(50% - 175px)
+	.table-pricing:hover 
+		height: 450px
+		width: 350px
+	.table-pricing:nth-child(2)
+		left: calc(50% - 175px)
+	.recomend
+		position: absolute
+		left: calc(50% - 175px)
+		height: 450px
+		width: 350px
+		
+	/**/
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 991px)
+	h2
+		font-size: 40px
+	/*HEADER BEGIN*/
+
+	header
+		&:after
+			background-position: 46% 67%
+
+	.header__top
+		padding-top: 45px
+		.logo
+			margin: 0 0 0 15px
+			img
+				width: 125px
+				min-width: 125px
+		nav
+			padding-right: 12px
+	.top-panel
+		margin-top: 50px
+	h1
+		font-size: 48px
+		margin-bottom: 20px
+		letter-spacing: 0
+
+	.header__button-content
+		margin-top: 35px
+
+	.header__description
+		p
+			// font-size: 18px
+	/*HEADER END*/
+
+
+	.privacy
+		background-position: 70% 81%, 160% 47%, 170% 35%
+		background-size: 146px 146px, 60%, 60% 
+
+
+
+	/* PRICING BEGIN */
+	.pricing-title
+		font-size: 150px
+	.table-pricing:hover .pricing__button
+		padding: 1.4em 0.5em
+		width: 200px
+	.pricing__button
+		padding: 0
+		width: 0px
+		
+	.recomend
+		.pricing__button
+			height: 58px
+			width: 200px
+			opacity: 1
+			padding: 1.4em 0.5em
+	/* PRICING END */
+
+
+
+	/* PRICING BEGIN */
+	.pricing
+		padding-bottom: 0
+	.table-pricing
+		width: 250px
+		height: 380px
+		img
+			width: 80px
+	.img-wrap
+		height: 140px
+	.table-pricing:hover .table-center
+		position: absolute
+		left: calc(50% - 125px)
+		height: 420px
+	.table-pricing:hover 
+		height: 420px
+		width: 250px
+	.table-pricing:nth-child(2)
+		left: calc(50% - 125px)
+	.recomend
+		transform: scale(1.1)
+		position: absolute
+		left: calc(50% - 125px)
+		height: 420px
+		width: 250px
+		
+	/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 767px)
+	/*HEADER BEGIN*/
+	header
+		&:after
+			background-position: 52% 86%
+
+	h1
+		font-size: 42px 
+	.header__description
+		font-size: 34px
+	//mobile menu
+	nav
+		position: fixed
+		right: 30px
+		top: 10px
+		z-index: 9999
+		ul.nav
+			display: none
+			background: #1c1c22
+			width: 200px
+			position: absolute
+			right: 0
+			top: 60px
+			li
+				display: block
+				text-align: center
+				border-bottom: 1px solid white
+				padding: 10px 0
+				&:last-child
+					border-bottom: none
+				a:not(.header__button-top)
+					margin-right: 0
+				a
+					color: white
+
+	.menu-icon
+		display: inline-block
+	/*HEADER END*/
+
+
+	.features
+		padding-bottom: 0
+		&__post
+			margin-bottom: 40px 
+
+
+
+	.privacy
+		padding-top: 25px
+		padding-bottom: 200px
+		background-position: 15% 100%, 136px 516px, 223px 469px
+		background-size:  146px 146px, auto, auto
+
+
+	/* PRICING BEGIN */
+	.pricing
+		padding-bottom: 65px
+	.table-pricing
+		display: block
+		position: static
+		width: 275px
+		height: 330px
+		margin: 0 auto
+		h3
+			padding-top: 20px
+	.table-pricing:hover
+		height: 400px
+		width: 275px
+	.table-pricing:last-child
+		display: block
+		margin: 0 auto
+	.pricing-title
+		font-size: 130px
+		margin-top: 40px
+		margin-bottom: -30px
+	.date
+		margin-top: 25px
+	.recomend
+		height: 400px
+
+	.img-wrap
+		width: 100px
+		height: 140px
+		margin: 0 auto
+
+
+	.how-download_wrap,
+	.how-download__app_wrap
+		padding-left: 15px
+	.work-all_right img.devices
+		padding-left: 7px
+	.app-store
+		width: 160px
+		height: 55px
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: contain
+		margin-left: 15px
+	.google-play
+		width: 160px
+		height: 55px
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: contain
+		margin-left: 15px
+
+	.all-know .apps-icon
+		text-align: center!important
+		
+	/**/	
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 575px)
+	h2
+		font-size: 28px
+	/*HEADER BEGIN*/
+	header
+		min-height: 482px
+		&:before
+			background-size: 200%
+			background-position: 50% 50%
+			top: 0
+		&:after
+			display: none
+	.header__top
+		padding-top: 30px
+	.menu-icon
+		right: 0px
+		top: 8px
+	h1
+		font-size: 38px
+		margin-top: 20px
+		margin-bottom: 17px
+		line-height: 1.2
+	.header__description
+		p
+			line-height: 1.5
+	.header__button-content
+		margin-top: 41px
+		
+	.top-panel
+		width: auto
+		margin-top: 20px
+		padding: 10px 20px
+		flex-direction: column
+		
+	.social-links
+		display: none
+ 
+
+
+	.privacy
+		background-position: 15% 100%, 100px 521px, 205px 470px
+		background-size:  146px 146px, auto, auto
+
+
+	/* PRICING BEGIN */
+	.pricing-title
+		font-size: 100px
+
+
+	/* HOW DOWNLOAD BEGIN */
+	.how-download
+		padding-bottom: 60px
+		h2
+			margin-top: 30px
+	.app-store
+		width: 160px
+		height: 55px
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: contain
+	.google-play
+		width: 160px
+		height: 55px
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: contain
+
+
+	section.all-know__porn
+		padding-bottom: 20px
+	.all-know__left_porn
+		&:after
+			position: absolute
+			content: '' 
+			width: 270px
+			height: 370px
+			background: url(../img/cosmo2.png) no-repeat center center
+			background-size: 270px auto
+			left: 0px
+			bottom: -100px
+			transform: scale(0.7)
+	/**/
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 480px)
+	
+	header
+		h1
+			font-size: 34px 
+
+	.privacy
+		background-position: 15% 100%, 100px 150%, 175px 139%
+		background-size:  146px 146px, auto, auto
+		h2
+			font-size: 28px
+			text-align: center
+
+
+	/* PRICING BEGIN */
+	.pricing-title
+		font-size: 76px
+
+	section.all-know__porn
+		padding-bottom: 0px
+	.all-know__left_porn
+		&:after
+			bottom: -75px
+			width: 180px
+			height: 300px
+			background-size: contain
+	/**/
+			
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 320px)
+	.all-know__right
+		p
+			padding-right: 10px
+
+	footer
+		padding: 3px 0
+		
+	/**/

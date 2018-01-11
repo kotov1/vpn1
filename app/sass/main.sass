@@ -1,0 +1,629 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	max-width: 1920px
+	display: block
+	margin: 0 auto
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+/*GLOBAL BEGIN*/
+
+section
+	//outline: 1px solid blue
+
+ul
+	padding: 0
+	margin: 0
+li
+	list-style-type: none
+a
+	text-decoration: none
+
+h2
+	font-size: 42px
+	font-family: "BrandonBlack"
+	text-align: center
+	color: $black
+h3
+	font-size: 18px
+	font-family: "BrandonBold"
+	margin: 0
+	line-height: 1.25
+	color: $black
+
+.button
+	background: $orange
+	border-radius: 30px
+	font-family: "BrandonRegular"
+	color: white
+	text-transform: uppercase
+	font-size: 13px
+	padding: 1.25em 4em
+	letter-spacing: 1px
+	text-align: center
+	transition: all 0.5s
+	&:hover
+		color: #fff;
+		box-shadow: 0px 0px 20px 1px #ff3d4c, inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+
+/*GLOBAL END*/
+
+/*HEADER BEGIN*/
+header
+	background-color: #1c1c22
+	background-image: radial-gradient(100% 0%, circle farthest-corner, rgba(255,255,255,.1) -20%, #1c1c22 40%) 
+	padding: 0 0 50px 
+	position: relative
+	background-size: cover
+	z-index: 1
+	&:before, &:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+	&:before
+		top: 14%
+		background-image: url('../img/word-svg.svg')
+		background-repeat: no-repeat
+		background-position: 46% 50%
+		z-index: -1
+		opacity: 0.1
+	&:after
+		background-image: url('../img/word-points.png')
+		background-repeat: no-repeat
+		background-size: auto
+		background-position: 46% 130%
+		z-index: -1
+
+.header__top
+	padding-top: 35px
+	color: white
+	.logo
+		margin: 4px 0 0 50px
+		img
+			width: 100px
+			min-width: 100px
+	nav
+		text-align: right
+		padding-right: 60px
+		li
+			display: inline-block
+		a:not(.header__button-top)
+			color: white
+			font-family: "BrandonRegular"
+			font-size: 1em
+			margin-right: 40px
+			border-bottom: 2px solid transparent
+			transition: all 0.5s
+			&:hover
+				border-bottom: 2px solid white
+.header__button-top
+	border-radius: 30px
+	border: 1px solid white
+	padding: 0.5em 2.4em
+	color: white
+	font-family: "BrandonRegular"
+	font-size: 1em
+	transition: all 0.5s
+	&:hover
+		border: 1px solid gray
+.header__button-content
+	display: block
+	margin: 23px auto 0
+	width: 235px
+	
+
+.top-panel
+	margin: 30px 0 0 0
+	width: 480px
+	list-style-type: none
+	display: flex
+	justify-content: space-around 
+	align-items: center
+	flex-wrap: wrap 
+	border-radius: 8px
+	background-color: rgba(255,255,255,.15) 
+	color: rgba(255,255,255,.9)
+	font-size: 14px
+	box-shadow: 0px 0px 8px rgba(255,255,255,.1)
+	li
+		padding: 4px 0
+		span
+			&:first-child
+				font-family: 'BrandonMedium'
+			&:last-child
+				font-family: 'BrandonRegular'
+
+h1
+	color: white
+	font-size: 65px
+	font-family: "BrandonThin", sans-serif
+	line-height: 1.1
+	margin-top: 20px
+	margin-bottom: 0
+	letter-spacing: 0.7px
+	font-weight: 400 
+	text-align: center
+
+.header__description
+	font-size: 38px 
+	p
+		color: white
+		font-family: "BrandonLight", sans-serif
+		padding: 0
+		margin: 0
+		text-align: center
+		span
+			font-family: "BrandonMedium", sans-serif
+
+//mobile menu
+.menu-icon
+	display: none	
+	cursor: pointer
+	padding: 5px
+	background: #1c1c22
+	border-radius: 10px
+	width: 50px
+	height: 50px
+	position: absolute
+	right: 0
+	top: 10px
+	padding: 7px
+	span
+		border: 2px solid #fff
+		width: 30px
+		display: block
+		transition: all 0.2s
+		margin: 5px auto
+.menu-icon.active
+	.first
+		transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		margin-top: 15px
+	.second
+		transform: rotate(135deg)
+		-webkit-transform: rotate(135deg)
+		position: relative
+		top: -9px
+	.third
+		display: none
+		transition: all 0.1s
+
+//hover for li
+.a_hover a
+	position: relative
+	text-decoration: none
+	color: #000
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 4px
+		bottom: 0
+		left: 0
+		background-color: #fd0
+		visibility: hidden
+		transform: scaleX(0)
+		transition: all .5s
+		color: #000
+	&:hover::after
+		visibility: visible
+		transform: scaleX(1)
+		&:active
+			color: red
+			
+//HEADER SOCIAL LINKS STYLES		
+.social-links
+	position: absolute
+	bottom: 9%
+	right: 10%
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li
+		margin-top: 20px
+	a
+		display: block
+		width: 15px
+		height: 15px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		&.facebook-link
+			background-image: url('../img/fb.png')
+		&.twitter-link
+			background-image: url('../img/tw.png')
+		&.linkedin-link
+			background-image: url('../img/in.png')
+
+/*HEADER END*/
+
+
+
+/* FEATURES BEGIN  */
+
+.features
+	padding: 50px 0 30px
+	
+.features__post
+	.svg-wrap
+		width: 100%
+		height: 100px
+		overflow: hidden
+		margin: 0 auto
+	svg
+		width: 100%
+		height: 100%
+		
+	h3
+		margin-top: 10px
+		font-family: 'BrandonLight', sans-serif
+		font-size: 24px 
+		color: #28282d 
+		text-align: center
+	p
+		padding: 0 15px 
+		font-family: 'roboto-light', sans-serif 
+		font-size: 16px
+		color: #949494 
+
+/* FEATURES END */
+ 
+
+
+/* PRIVACY BEGIN  */
+
+.privacy
+	padding: 50px 0
+	background-color: #F8F8F8 
+	background-image: url('../img/utorrent-ic.png'), url('../img/utorrent-bg.jpg'), url('../img/utorrent-bg.jpg')
+	background-repeat: no-repeat, no-repeat, no-repeat
+	background-position: 60% 81%, 90% 44%, 83% 72%
+	background-size: 146px 146px, auto, auto
+	color: #28282D
+	h2
+		font-family: 'BrandonLight', sans-serif
+		font-size: 34px
+		text-align: left
+	p
+		font-family: 'roboto-light', sans-serif 
+		font-size: 16px
+		color: #949494 
+	.privacy__facts
+		list-style-type: none
+		font-size: 20px
+		li
+			font-family: 'BrandonRegular', sans-serif
+			padding-left: 30px 
+			background: url('../img/list-icon.png') no-repeat 0 50% 
+			
+	.img-wrap
+		margin-top: 40px 
+		position: relative
+		img
+			position: absolute
+
+ 	
+/* PRIVACY BEGIN */ 
+
+
+
+
+
+
+
+
+
+
+/* PRICING BEGIN */
+.pricing
+	padding-top: 100px
+	padding-bottom: 75px
+	
+		
+.pricing-title
+	color: rgba(242,242,242,.729)
+	line-height: 0.5
+	margin: 69px 0 10px 0
+	font-size: 200px
+	font-family: "BrandonBlack"
+	text-transform: uppercase
+	text-align: center
+	position: relative
+
+
+.table-wrap
+    min-height: 515px
+    position: relative
+.table-pricing
+	border-radius: 5px
+	width: 400px
+	height: 400px
+	text-align: center
+	box-shadow: $shadow
+	background: white
+	transition: all 0.2s
+	position: absolute
+	z-index: 1
+	&:nth-child(2)
+		left: calc(50% - 200px)
+		display: block
+		margin: 0 auto
+	&:last-child
+		right: 0
+	&:first-child
+		left: 0
+
+	h3
+		text-transform: uppercase
+		font-size: 19px
+		font-family: "BrandonBold"
+		color: rgb(231,231,231)
+		letter-spacing: 1px
+		margin-top: 40px
+		margin-bottom: 15px
+	img
+		margin: 0 auto
+		
+	.img-wrap
+		width: 100px
+		height: 165px
+		margin: 0 auto
+svg
+	height: 100%	
+	width: 100%
+
+.table-pricing:hover 
+	height: 450px
+	width: 400px
+	z-index: 10
+	@extend.choise
+.choise
+	transform: scale(1.1)
+	transition: all 0.2s
+.table-pricing:hover .pricing__button
+	opacity: 1
+	transition: opacity 2s 0s
+	height: 59px
+.recomend
+	position: absolute
+	left: calc(50% - 200px)
+	display: block
+	margin: 30px auto
+	transform: scale(1.1)
+	transition: all 0.2s
+	height: 450px
+	width: 400px
+	z-index: 2
+	.pricing__button
+		// width: 235px
+		opacity: 1
+		height: 58px
+
+
+
+
+.date
+	font-size: 18px
+	font-family: "BrandonBold"
+	margin-top: 35px
+	margin-bottom: 10px
+.price
+	font-family: "BrandonBlack"
+	font-size: 50px
+	line-height: 40px
+	margin-top: 0
+	transition: all 1s
+	.symbol
+		font-family: "BrandonMedium"
+		vertical-align: top
+		font-size: 30px
+		line-height: 30px
+	.time
+		font-family: "BrandonMedium"
+		vertical-align: bottom
+		font-size: 30px
+		line-height: 30px
+		
+		
+.pricing__button
+	width: 215px
+	display: block
+	margin: 0 auto
+	margin-top: -30px
+	opacity: .5
+	// height: 0
+	transition: all 0.2s 
+
+/* PRICING END */
+
+
+
+/* HOW DOWNLOAD BEGIN */
+.how-download
+	padding-bottom: 75px
+	//background: url(../img/header_bg.jpg) no-repeat
+	background: url(../img/bg-header3ds.jpg) no-repeat center center
+	background-size: cover
+	position: relative
+	background-position: top center
+	&:before
+		//content: ""
+		content: none
+		position: absolute
+		width: 100%
+		height: 100%
+		//background: rgba(99,124,341,.341)
+		background: rgba(0,0,255,.35)
+	h2
+		margin-top: 70px
+		color: white
+		margin-bottom: 0
+		text-align: left
+	p
+		color: white
+		font-size: 16px
+		font-family: "BrandonLight"
+		line-height: 1.25
+	p
+		margin-top: 0
+		margin-bottom: 0
+	p:last-child
+		margin-top: 10px
+		margin-bottom: 40px
+.app-store
+	width: 151px
+	height: 53px
+	display: inline-block
+	background-repeat: no-repeat
+	background-size: cover
+.google-play
+	width: 160px
+	height: 53px
+	display: inline-block
+	background-repeat: no-repeat
+	background-size: cover
+/* HOW DOWNLOAD END */
+
+
+/* FOOTER BEGIN  */
+footer
+	text-align: center
+	padding: 20px 0
+	p
+		font-size: 14px
+		font-family: "BrandonRegular"
+		color: $gray
+		a
+			display: inline-block
+			padding-left: 5px
+/* FOOTER END */
+
+section.all-know__porn
+	padding-bottom: 90px
+.all-know__left_porn
+	&:after
+		position: absolute
+		content: '' 
+		width: 270px
+		height: 370px
+		background: url(../img/cosmo2.png) no-repeat center center
+		background-size: contain
+		left: 0px
+		bottom: -120px
+		//outline: 1px solid red
+		//z-index: -1
+
+section.all-know_useTorrent
+	padding-bottom: 100px
+.all-know__left_useTorrent
+	&:after
+		position: absolute
+		content: '' 
+		width: 250px
+		height: 370px
+		background: url(../img/object4.png) no-repeat center center
+		background-size: contain
+		left: 0px
+		bottom: -145px
+		//outline: 1px solid red
+
+.bg_mobi
+	display: none
+
+#userPlace
+	font-family: roboto-light
+	color: #a9aaaa
+	font-size: 14px
+	line-height: 1.8
+
+#all-know__porn,
+#all-know__rest,
+#all-know__public,
+#all-know_useTorrent
+	display: none
+	
+
+
+//icon download app
+.apps-icon
+	text-align: center
+	margin-top: 5px
+.apps-icon__title
+	color: white
+	display: inline-block
+	line-height: 1
+	vertical-align: middle
+	font-size: 14px
+	font-family: "roboto-bold"
+	letter-spacing: 0.5px
+
+
+.icon-buton 
+	width: 20px
+	height: 20px
+	display: inline-block
+	line-height: 1
+	vertical-align: middle
+
+@import "media" // Всегда в конце
+
+
+
+
+
+
+
