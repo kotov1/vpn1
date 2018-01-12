@@ -41,19 +41,29 @@
 	/* PRICING BEGIN */
 	.table-pricing
 		width: 350px
+		.pricing__button
+			width: 200px
+			padding-left: 0
+			padding-right: 0
+		&:hover
+			.pricing__button
+				padding-left: 0
+				padding-right: 0
+			.total-wrap
+				display: inline
 	.table-pricing:hover .table-center
 		position: absolute
 		left: calc(50% - 175px)
 	.table-pricing:hover 
-		height: 450px
 		width: 350px
 	.table-pricing:nth-child(2)
 		left: calc(50% - 175px)
 	.recomend
 		position: absolute
 		left: calc(50% - 175px)
-		height: 450px
 		width: 350px
+	.total-wrap
+		display: block
 		
 	/**/
 
@@ -105,19 +115,13 @@
 
 
 	/* PRICING BEGIN */
-	.pricing-title
-		font-size: 150px
-	.table-pricing:hover .pricing__button
-		padding: 1.4em 0.5em
-		width: 200px
-	.pricing__button
-		padding: 0
-		width: 0px
-		
+	.table-pricing
+		.pricing__button
+			width: 160px
+
 	.recomend
 		.pricing__button
 			height: 58px
-			width: 200px
 			opacity: 1
 			padding: 1.4em 0.5em
 	/* PRICING END */
@@ -126,6 +130,7 @@
 
 	/* PRICING BEGIN */
 	.pricing
+		padding-top: 15px
 		padding-bottom: 0
 	.table-pricing
 		width: 250px
@@ -227,17 +232,32 @@
 	/* PRICING BEGIN */
 	.pricing
 		padding-bottom: 65px
+		
+	.table-wrap
+		display: flex
+		flex-direction: column
+		
+		.table-pricing
+			&:first-child
+				order: 2
+			&:last-child
+				order: 1
+
 	.table-pricing
 		display: block
-		position: static
-		width: 275px
+		position: relative
+		left: 0 !important
+		width: 90%
 		height: 330px
 		margin: 0 auto
+		z-index: 0
+		margin-bottom: 40px !important
 		h3
+			margin-top: 0
 			padding-top: 20px
 	.table-pricing:hover
 		height: 400px
-		width: 275px
+		width: 90%
 	.table-pricing:last-child
 		display: block
 		margin: 0 auto
@@ -248,7 +268,21 @@
 	.date
 		margin-top: 25px
 	.recomend
-		height: 400px
+		transform: scale(1)!important
+		.price
+			font-size: 50px
+			line-height: 40px
+	.popular
+		width: 90%
+		max-width: 256px
+		
+	.table-pricing
+		.pricing__button
+			opacity: 1
+			width: 100%
+			max-width: 200px 
+		.total-wrap
+			display: inline
 
 	.img-wrap
 		width: 100px
@@ -338,6 +372,12 @@
 
 
 	/* PRICING BEGIN */
+	.pricing
+		h2
+			line-height: 1.2
+	.table-pricing
+		width: 100%
+		max-width: 300px 
 	.pricing-title
 		font-size: 100px
 
@@ -361,19 +401,6 @@
 		background-size: contain
 
 
-	section.all-know__porn
-		padding-bottom: 20px
-	.all-know__left_porn
-		&:after
-			position: absolute
-			content: '' 
-			width: 270px
-			height: 370px
-			background: url(../img/cosmo2.png) no-repeat center center
-			background-size: 270px auto
-			left: 0px
-			bottom: -100px
-			transform: scale(0.7)
 	/**/
 
 
@@ -400,17 +427,12 @@
 
 
 	/* PRICING BEGIN */
+	.pricing
+		h2
+			padding: 0 20px 
 	.pricing-title
 		font-size: 76px
 
-	section.all-know__porn
-		padding-bottom: 0px
-	.all-know__left_porn
-		&:after
-			bottom: -75px
-			width: 180px
-			height: 300px
-			background-size: contain
 	/**/
 			
 

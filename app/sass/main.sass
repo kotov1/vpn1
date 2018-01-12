@@ -222,6 +222,7 @@ h1
 	right: 0
 	top: 10px
 	padding: 7px
+	z-index: 100 
 	span
 		border: 2px solid #fff
 		width: 30px
@@ -370,19 +371,16 @@ h1
 
 /* PRICING BEGIN */
 .pricing
-	padding-top: 100px
+	padding-top: 30px
 	padding-bottom: 75px
 	
+	h2
+		margin-bottom: 58px
+		font-family: 'BrandonLight', sans-serif 
+		font-size: 34px
+		text-align: center
 		
-.pricing-title
-	color: rgba(242,242,242,.729)
-	line-height: 0.5
-	margin: 69px 0 10px 0
-	font-size: 200px
-	font-family: "BrandonBlack"
-	text-transform: uppercase
-	text-align: center
-	position: relative
+
 
 
 .table-wrap
@@ -391,7 +389,7 @@ h1
 .table-pricing
 	border-radius: 5px
 	width: 400px
-	height: 400px
+	height: 385px
 	text-align: center
 	box-shadow: $shadow
 	background: white
@@ -408,12 +406,12 @@ h1
 		left: 0
 
 	h3
-		text-transform: uppercase
-		font-size: 19px
-		font-family: "BrandonBold"
-		color: rgb(231,231,231)
+		text-transform: capitalize
+		font-size: 30px
+		font-family: "BrandonLight", sans-serif
+		color: #28282d
 		letter-spacing: 1px
-		margin-top: 40px
+		margin-top: 65px
 		margin-bottom: 15px
 	img
 		margin: 0 auto
@@ -427,31 +425,50 @@ svg
 	width: 100%
 
 .table-pricing:hover 
-	height: 450px
 	width: 400px
 	z-index: 10
 	@extend.choise
 .choise
 	transform: scale(1.1)
-	transition: all 0.2s
-.table-pricing:hover .pricing__button
-	opacity: 1
-	transition: opacity 2s 0s
-	height: 59px
+	transition: transform 0.2s
+	
+.table-pricing:hover 
+	.popular
+		opacity: 1
+		width: 60%
+	.price
+		font-size: 70px
+		line-height: 56px
+	.pricing__button
+		opacity: 1
+		transition: opacity 2s 0s
+		height: 59px
+		padding: 1.4em 4em
+	
+
 .recomend
 	position: absolute
 	left: calc(50% - 200px)
 	display: block
 	margin: 30px auto
-	transform: scale(1.1)
-	transition: all 0.2s
-	height: 450px
+	transform: scale(1.05)
+	transition: transform 0.2s
+	height: 385px
 	width: 400px
 	z-index: 2
 	.pricing__button
-		// width: 235px
+		padding: 1.4em 4em
 		opacity: 1
 		height: 58px
+		bottom: 10%
+	.popular
+		opacity: 1
+		width: 60%
+	.price
+		font-size: 70px
+		line-height: 56px
+	h3
+		margin-top: 40px
 
 
 
@@ -466,7 +483,8 @@ svg
 	font-size: 50px
 	line-height: 40px
 	margin-top: 0
-	transition: all 1s
+	margin-bottom: 0
+	transition: all .3s
 	.symbol
 		font-family: "BrandonMedium"
 		vertical-align: top
@@ -480,13 +498,41 @@ svg
 		
 		
 .pricing__button
+	padding: 1em 4em
 	width: 215px
 	display: block
-	margin: 0 auto
-	margin-top: -30px
+	position: absolute
+	bottom: 10%
+	left: 50%
+	transform: translateX(-50%)
 	opacity: .5
-	// height: 0
 	transition: all 0.2s 
+
+
+.popular
+	font-size: 14px
+	font-family: 'BrandonMedium', sans-serif 
+	color: #FFF
+	text-transform: uppercase
+	background-color: #ff3d4c
+	padding: 2px 0
+	width: 50%
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translate(-50%,-50%)
+	border-radius: 6px   
+	opacity: 0.5
+	transition: all .2s
+
+.total
+	margin-top: 30px
+	font-family: "BrandonBold", sans-serif
+	font-size: 15px
+	color: #CECECE 
+	.bold
+		color: #383c43 
+
 
 /* PRICING END */
 

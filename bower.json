@@ -1,0 +1,20 @@
+{
+  "name": "vpn torrents",
+  "description": "vpn torrents landing page",
+  "main": "index.js",
+  "authors": [
+    "PP"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kotov1/vpn1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.1"
+  }
+}

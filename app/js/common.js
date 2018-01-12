@@ -25,6 +25,14 @@ $(".table-pricing").mouseleave(function(){
 		
 	});
 
+
+	$('.owl-carousel').owlCarousel();
+
+
+
+
+
+
 });
 
 
