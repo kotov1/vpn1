@@ -299,16 +299,16 @@ h1
 .features
 	padding: 50px 0 30px
 	
-.features__post
-	.svg-wrap
-		width: 100%
-		height: 100px
-		overflow: hidden
-		margin: 0 auto
-	svg
+.svg-wrap
+	width: 100%
+	height: 100px
+	overflow: hidden
+	margin: 0 auto
+	svg, img
 		width: 100%
 		height: 100%
-		
+	
+.features__post
 	h3
 		margin-top: 10px
 		font-family: 'BrandonLight', sans-serif
@@ -357,8 +357,8 @@ h1
 		img
 			position: absolute
 
- 	
-/* PRIVACY BEGIN */ 
+
+/* PRIVACY END */ 
 
 
 
@@ -384,7 +384,7 @@ h1
 
 
 .table-wrap
-    min-height: 515px
+    min-height: 450px
     position: relative
 .table-pricing
 	border-radius: 5px
@@ -441,7 +441,7 @@ svg
 		line-height: 56px
 	.pricing__button
 		opacity: 1
-		transition: opacity 2s 0s
+		transition: opacity 1s 0s
 		height: 59px
 		padding: 1.4em 4em
 	
@@ -534,35 +534,88 @@ svg
 		color: #383c43 
 
 
+
+.payment_icon
+	display: inline-block
+	width: 99px
+	height: 40px
+	background-repeat: no-repeat
+	background-position: center center
+	// background-size: 100%
+	&.visa
+		background-image: url('../img/visa.png')
+	&.master
+		background-image: url('../img/mastercard.png')
+	&.maestro
+		background-image: url('../img/maestro.png')
+	&.paypal
+		background-image: url('../img/paypal.png')
+	&.bitcoin
+		background-image: url('../img/bitcoin.png')
+
+
+
+
 /* PRICING END */
 
 
 
 /* HOW DOWNLOAD BEGIN */
 .how-download
-	padding-bottom: 75px
-	//background: url(../img/header_bg.jpg) no-repeat
-	background: url(../img/bg-header3ds.jpg) no-repeat center center
-	background-size: cover
+	background-color: #1c1c22
+	background-image: radial-gradient(100% 0%, circle farthest-corner, rgba(255,255,255,.1) -20%, #1c1c22 40%) 
+	padding: 0 0 50px 
 	position: relative
-	background-position: top center
-	&:before
-		//content: ""
-		content: none
+	background-size: cover
+	z-index: 0
+	&:before, &:after
+		content: ''
+		display: block
 		position: absolute
 		width: 100%
 		height: 100%
-		//background: rgba(99,124,341,.341)
-		background: rgba(0,0,255,.35)
-	h2
-		margin-top: 70px
-		color: white
-		margin-bottom: 0
+		top: 0
+		left: 0
+	&:before
+		background-image: url('../img/word-svg.svg')
+		background-repeat: no-repeat
+		background-position: 46% 50%
+		z-index: -1
+		opacity: 0.1
+	&:after
+		background-image: url('../img/word-points.png')
+		background-repeat: no-repeat
+		background-size: auto
+		background-position: 36% 127%
+		z-index: -1
+	
+	.info, h3
+		font-family: "BrandonLight", sans-serif
+		line-height: 1.2
+		font-weight: normal
+		span
+			display: block
+			
+	.info
+		font-size: 52px
+		margin: 0
+		color: rgba(255,255,255,.5) 
+		position: absolute
+		top: 50%
+		left: 51%
+		transform: translateY(-50%)
+		text-align: center
+
+	h3
+		font-size: 34px
+		margin-top: 52px
+		color: rgba(255,255,255,.9) 
+		margin-bottom: 14px
 		text-align: left
 	p
 		color: white
 		font-size: 16px
-		font-family: "BrandonLight"
+		font-family: "roboto-light", sans-serif
 		line-height: 1.25
 	p
 		margin-top: 0
@@ -570,18 +623,10 @@ svg
 	p:last-child
 		margin-top: 10px
 		margin-bottom: 40px
-.app-store
-	width: 151px
-	height: 53px
-	display: inline-block
-	background-repeat: no-repeat
-	background-size: cover
-.google-play
-	width: 160px
-	height: 53px
-	display: inline-block
-	background-repeat: no-repeat
-	background-size: cover
+		
+	.svg-wrap
+		height: 57px
+
 /* HOW DOWNLOAD END */
 
 
@@ -596,36 +641,11 @@ footer
 		a
 			display: inline-block
 			padding-left: 5px
+			color: #4A7ED9
+			&:hover
+				text-decoration: underline 
 /* FOOTER END */
 
-section.all-know__porn
-	padding-bottom: 90px
-.all-know__left_porn
-	&:after
-		position: absolute
-		content: '' 
-		width: 270px
-		height: 370px
-		background: url(../img/cosmo2.png) no-repeat center center
-		background-size: contain
-		left: 0px
-		bottom: -120px
-		//outline: 1px solid red
-		//z-index: -1
-
-section.all-know_useTorrent
-	padding-bottom: 100px
-.all-know__left_useTorrent
-	&:after
-		position: absolute
-		content: '' 
-		width: 250px
-		height: 370px
-		background: url(../img/object4.png) no-repeat center center
-		background-size: contain
-		left: 0px
-		bottom: -145px
-		//outline: 1px solid red
 
 .bg_mobi
 	display: none
@@ -636,11 +656,7 @@ section.all-know_useTorrent
 	font-size: 14px
 	line-height: 1.8
 
-#all-know__porn,
-#all-know__rest,
-#all-know__public,
-#all-know_useTorrent
-	display: none
+
 	
 
 

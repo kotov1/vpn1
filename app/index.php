@@ -740,13 +740,13 @@
 		</div> <!-- /.row -->
 
 		<div class="row">
-			<div class="col-12">
-				<div id="owl-carousel">
-					<div class="img-wrap"><img src="img/visa.png" alt=""></div>
-					<div class="img-wrap"><img src="img/mastercard.png" alt=""></div>
-					<div class="img-wrap"><img src="img/maestro.png" alt=""></div>
-					<div class="img-wrap"><img src="img/paypal.png" alt=""></div>
-					<div class="img-wrap"><img src="img/bitcoin.png" alt=""></div>
+			<div class="col-lg-7 col-md-11 mx-auto">
+				<div class="owl-carousel icons-wrap">
+					<i class="payment_icon visa"></i>
+					<i class="payment_icon master"></i>
+					<i class="payment_icon maestro"></i>
+					<i class="payment_icon paypal"></i>
+					<i class="payment_icon bitcoin"></i>
 				</div>
 			</div>
 		</div>
@@ -762,19 +762,29 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-lg-6 col-md-8">
+			<div class="col-lg-auto col-md-8">
 				<div class="how-download_wrap">
-					<h2 class="wow bounceInUp">How to download the app?</h2>
+					<h3 class="wow bounceInUp">How to download the app?</h2>
 					<p>Just download the app from the store.</p>
 					<p>Simple nice and user-friendly application of vpn.</p>
 				</div>
+			</div> <!-- /.col -->
+		</div> <!-- /.row -->
+
+		<div class="info">We have 250+ servers <span>in 10 countries</span></div>
+
+	<div class="row">
+		<div class="col-lg-2 col-md-3 col-sm-4 col-12">
+			<div class="svg-wrap">
+				<img src="img/unblock.svg" alt="Unblock Content">
 			</div>
 		</div>
-
-<div class="row">
-		<div class="col-lg-2 col-md-3 col-sm-4"><a href="" class="app-store" style="background-image:url(img/app-store.png)"></a></div>
-		<div class="col-lg-2 col-md-3 col-sm-4"><a href="" class="google-play" style="background-image:url(img/google-play.png)"></a></div>
-</div>
+		<div class="col-lg-2 col-md-3 col-sm-4 col-12">
+			<div class="svg-wrap">
+				<img src="img/protect.svg" alt="Protect Your Privacy">
+			</div>
+		</div>
+	</div>
 
 	</div>
 </section>

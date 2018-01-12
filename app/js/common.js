@@ -26,7 +26,29 @@ $(".table-pricing").mouseleave(function(){
 	});
 
 
-	$('.owl-carousel').owlCarousel();
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		autoWidth:true,
+		autoplay:true,
+		autoplayTimeout: 100,
+		responsiveClass:true,
+		responsive : {
+			0: {
+				items:1,
+				margin:50
+			},
+			576: {
+				items:5,
+				margin:30
+			}
+		}
+	});
+
+	$(document).ready(function(){
+		if($(window).width() < 576){
+		    $(".owl-carousel").owlCarousel('destroy')
+		}
+		});
 
 
 
