@@ -24,9 +24,9 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
+
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
-	<script src="//api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
 </head>
 
 <body>
@@ -764,7 +764,7 @@
 		<div class="row">
 			<div class="col-lg-auto col-md-8">
 				<div class="how-download_wrap">
-					<h3 class="wow bounceInUp">How to download the app?</h2>
+					<h3>How to download the app?</h2>
 					<p>Just download the app from the store.</p>
 					<p>Simple nice and user-friendly application of vpn.</p>
 				</div>
@@ -811,10 +811,10 @@
 <!-- FOOTER END  -->
  
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script> 
-		 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2mVy0uvntIIJqpE_HCtXbCkh0jjMPdlQ&callback=initMap&language=en_US">
+	<script src="js/scripts.min.js"></script>
 
-		</script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2mVy0uvntIIJqpE_HCtXbCkh0jjMPdlQ&callback=initMap&language=en_US"></script>
 
 </body>
 </html>

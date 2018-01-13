@@ -30,7 +30,7 @@ $(".table-pricing").mouseleave(function(){
 		loop:true,
 		autoWidth:true,
 		autoplay:true,
-		autoplayTimeout: 100,
+		autoplayTimeout: 1000,
 		responsiveClass:true,
 		responsive : {
 			0: {
@@ -51,25 +51,17 @@ $(".table-pricing").mouseleave(function(){
 		});
 
 
-
+	// wow = new WOW(
+	// 	{
+	// 		boxClass:     'wow',      // default
+	// 		animateClass: 'animated', // default
+	// 		offset:       150,          // default
+	// 		mobile:       true,       // default
+	// 		live:         true        // default
+	// 	}
+	// )
+	// wow.init();
 
 
 
 });
-
-
-
-
-ymaps.ready(init);
-	function init() {
-	ymaps.geolocation.get({provider:"yandex"})
-	.then(function (res)  {
-		var g = res.geoObjects.get(0);
-
-		$("#userPlace")
-			.html(g.getLocalities()[0] + ', ' + g.getCountry());
-	})
-	 .catch(function (err) {
-		console.log('Не удалось установить местоположение', err);
-	});
-	}
